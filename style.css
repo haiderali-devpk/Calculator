@@ -1,0 +1,125 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.3rem;
+  background-color: rgb(104, 174, 245);
+  max-height: 100vh;
+}
+
+h1{
+  width: 100%;
+  background-color: white;
+  padding: 2px;
+  text-align: center;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  font-size: 2rem;
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+  h1 {
+    max-width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  }
+}
+.calculator {
+  background-color: white;
+  width: 300px;
+  height: 425px;
+  margin: 30px auto;
+  border-radius: 10px;
+  padding: 10px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  .calculator {
+    display: grid;
+    grid-template-rows: repeat(4,1fr);
+    gap: 10px;
+    max-width: 300px;
+    max-height: 425px;
+  }
+}
+
+.display input {
+  text-align: right;
+  height: 60px;
+  width: 100%;
+  border: 2px solid black;
+  border-radius: 8px;
+  outline: none;
+  padding: 10px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+button{
+  height: 40px;
+  width: 65px;
+  margin: 5px 0;
+  border: none;
+  border-radius: 5px;
+  background-color: black;
+  color: white;
+  outline: none;
+  animation: name 1s ease-in 0s;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  button {
+    height: 30px;
+    width: 65px;
+  }
+}
+
+@keyframes name {
+  from {transform:scale(0);}
+  to {transform:scale(1) ;}
+}
+
+button:hover{
+  transform: scale(1.1);
+}
+
+#btn5{
+  position: relative;
+}
+
+#btnplus{
+  position: absolute;
+  height: 90px;
+  margin: 7px;
+  background-color: red;
+}
+
+@media (max-width: 768px) and (min-width: 320px) {
+  #btn5{
+  position: relative;
+}
+
+#btnplus{
+  position: absolute;
+  height: 80px;
+  margin: 5px;
+  background-color: red;
+}
+
+}
+
+#btn-off{
+  background-color: red;
+}
+
+#btn-on{
+  background-color: rgb(32, 248, 32);
+}
